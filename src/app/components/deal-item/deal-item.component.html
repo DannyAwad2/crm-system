@@ -1,0 +1,8 @@
+<div class="deal-item">
+  <h4>{{ deal().product.name }}</h4>
+  <p class="company">{{ deal().user.name }}</p>
+  <div class="deal-info">
+    <span class="deal-value">{{ deal().product.price | currency }}</span>
+    <span class="deal-owner">{{ deal().teamMembers[0].name }}</span>
+  </div>
+</div>

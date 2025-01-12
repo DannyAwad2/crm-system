@@ -1,0 +1,15 @@
+// Layout
+.crm-container {
+  display: flex;
+
+  height: 100vh;
+}
+
+// Main Content Area
+
+.main-content {
+  flex: 1;
+  padding: 24px;
+  background-color: #f6f6f7;
+  overflow-y: scroll;
+}

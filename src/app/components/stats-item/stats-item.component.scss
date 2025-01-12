@@ -1,0 +1,33 @@
+// Stats item
+
+.stats-item {
+  background: white;
+
+  padding: 24px;
+
+  border-radius: 12px;
+
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+
+  transition: transform 0.2s ease;
+
+  &:hover {
+    transform: translateY(-2px);
+  }
+
+  h3 {
+    font-size: 16px;
+
+    color: #8e9196;
+
+    margin-bottom: 8px;
+  }
+
+  .stat-number {
+    font-size: 28px;
+
+    font-weight: 600;
+
+    color: #403e43;
+  }
+}

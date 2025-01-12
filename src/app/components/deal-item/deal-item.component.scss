@@ -1,0 +1,53 @@
+// Deal item
+
+.deal-item {
+  background: #f6f6f7;
+
+  border-radius: 8px;
+
+  padding: 16px;
+
+  cursor: pointer;
+
+  transition: all 0.2s ease;
+
+  &:hover {
+    transform: translateY(-2px);
+
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  }
+
+  h4 {
+    font-size: 15px;
+
+    margin-bottom: 4px;
+  }
+
+  .company {
+    font-size: 13px;
+
+    color: #8e9196;
+
+    margin-bottom: 12px;
+  }
+
+  .deal-info {
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    font-size: 13px;
+
+    .deal-value {
+      color: #9b87f5;
+
+      font-weight: 500;
+    }
+
+    .deal-owner {
+      color: #8e9196;
+    }
+  }
+}

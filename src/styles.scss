@@ -1,0 +1,51 @@
+// Reset and Base Styles
+
+* {
+  margin: 0;
+
+  padding: 0;
+
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif !important;
+
+  color: #403e43;
+
+  background-color: #f6f6f7;
+}
+
+// Responsive Design
+
+@media (max-width: 768px) {
+  .crm-container {
+    flex-direction: column;
+  }
+
+  .sidebar {
+    width: 100%;
+
+    padding: 16px;
+  }
+
+  .main-content {
+    padding: 16px;
+  }
+
+  .search-input {
+    width: 100%;
+
+    max-width: 300px;
+  }
+
+  .stats-container {
+    grid-template-columns: 1fr;
+  }
+
+  .top-header {
+    flex-direction: column;
+
+    gap: 16px;
+  }
+}

@@ -1,0 +1,13 @@
+<div class="pipeline-stage">
+  <div class="stage-header">
+    <h3>{{ title() }}</h3>
+    <span class="deal-count">{{ deals().length }} deals</span>
+    <span class="stage-value">{{ getTotalDealsValue() | currency }} </span>
+  </div>
+
+  <div class="deals-container">
+    @for (deal of deals(); track deal.dealId) {
+    <app-deal-item [deal]="deal" />
+    }
+  </div>
+</div>

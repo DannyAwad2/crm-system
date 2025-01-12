@@ -1,0 +1,27 @@
+// Recent Activity
+
+.recent-activity {
+  background: white;
+
+  padding: 24px;
+
+  border-radius: 12px;
+
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+
+  h2 {
+    margin-bottom: 24px;
+
+    font-size: 20px;
+  }
+}
+
+// Activity List
+
+.activity-list {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 16px;
+}

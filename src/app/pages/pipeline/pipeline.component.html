@@ -1,0 +1,27 @@
+<header class="top-header">
+  <div class="header-left">
+    <h1>Pipeline</h1>
+
+    <div class="pipeline-stats">
+      <span>Total Value: $1.2M</span>
+
+      <span>Active Deals: 24</span>
+    </div>
+  </div>
+
+  <div class="header-right">
+    <button class="add-deal-btn">+ New Deal</button>
+  </div>
+</header>
+<div class="pipeline-container">
+  @let leads = getDealStages('lead'); @let loses = getDealStages('lose'); @let
+  meetings = getDealStages('meeting'); @let negotiations =
+  getDealStages('negotiation'); @let proposals = getDealStages('proposal');
+
+  <app-pipeline-stage title="Leads" [deals]="leads" />
+  <app-pipeline-stage title="Meetings" [deals]="meetings" />
+  <app-pipeline-stage title="Proposals" [deals]="proposals" />
+  <app-pipeline-stage title="Negotiations" [deals]="negotiations" />
+  <app-pipeline-stage title="Wins" [deals]="[]" />
+  <app-pipeline-stage title="Loses" [deals]="loses" />
+</div>
