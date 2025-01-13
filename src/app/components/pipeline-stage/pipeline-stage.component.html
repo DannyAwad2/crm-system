@@ -5,9 +5,14 @@
     <span class="stage-value">{{ getTotalDealsValue() | currency }} </span>
   </div>
 
-  <div class="deals-container">
+  <div
+    cdkDropList
+    class="deals-container"
+    [cdkDropListData]="deals()"
+    (cdkDropListDropped)="drop($event)"
+  >
     @for (deal of deals(); track deal.dealId) {
-    <app-deal-item [deal]="deal" />
+    <app-deal-item cdkDrag cdkDragData="deal" [deal]="deal" />
     }
   </div>
 </div>

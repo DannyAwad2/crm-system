@@ -1,17 +1,17 @@
-import { Component } from '@angular/core';
+import { Component, inject, OnInit } from '@angular/core';
 import { DealStatus, IDeal, Priority } from '../../shared/ideal';
 import { UserType } from '../../shared/iuser';
-import { DealItemComponent } from '../../components/deal-item/deal-item.component';
 import { PipelineStageComponent } from '../../components/pipeline-stage/pipeline-stage.component';
+import { PipelineHeaderComponent } from '../../components/pipeline-header/pipeline-header.component';
+import { CdkDragDrop, moveItemInArray } from '@angular/cdk/drag-drop';
 
 @Component({
   selector: 'app-pipeline',
-  imports: [DealItemComponent, PipelineStageComponent],
+  imports: [PipelineStageComponent, PipelineHeaderComponent],
   templateUrl: './pipeline.component.html',
   styleUrl: './pipeline.component.scss',
 })
-export class PipelineComponent {
-  // Create dummy deals data
+export class PipelineComponent implements OnInit {
   deals: IDeal[] = Array.from({ length: 12 }, (_, index) => ({
     product: {
       name: `Product ${index + 1}`,
@@ -55,10 +55,19 @@ export class PipelineComponent {
     ],
   }));
 
+  leads = this.getDealStages('lead');
+  loses = this.getDealStages('lose');
+  meetings = this.getDealStages('meeting');
+  negotiations = this.getDealStages('negotiation');
+  proposals = this.getDealStages('proposal');
+
+  ngOnInit(): void {}
+
   getDealStages(stage: DealStatus) {
     return this.deals.filter((deal) => deal.status === stage);
   }
-  getTotalDealsValue(deals: IDeal[]) {
-    return deals.reduce((acc, curr) => acc + curr.product.price, 0);
+
+  handleChange(deals: IDeal[], event: CdkDragDrop<IDeal[]>) {
+    moveItemInArray(deals, event.previousIndex, event.currentIndex);
   }
 }

@@ -1,0 +1,15 @@
+<header class="top-header">
+  <div class="header-left">
+    <h1>Pipeline</h1>
+
+    <div class="pipeline-stats">
+      <span>Total Value: {{ getTotalDealsValue() | currency }}</span>
+
+      <span>Active Deals: {{ deals().length }}</span>
+    </div>
+  </div>
+
+  <div class="header-right">
+    <button class="add-deal-btn">+ New Deal</button>
+  </div>
+</header>

@@ -1,0 +1,59 @@
+// Top Header
+
+.top-header {
+  display: flex;
+
+  justify-content: space-between;
+
+  align-items: center;
+
+  margin-bottom: 32px;
+
+  padding: 16px 24px;
+
+  background: white;
+
+  border-radius: 12px;
+
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+
+  h1 {
+    font-size: 24px;
+
+    margin-bottom: 8px;
+  }
+
+  .pipeline-stats {
+    display: flex;
+
+    gap: 16px;
+
+    color: #8e9196;
+
+    span {
+      font-size: 14px;
+    }
+  }
+}
+
+// Add Deal Button
+
+.add-deal-btn {
+  padding: 10px 20px;
+
+  background-color: #9b87f5;
+
+  color: white;
+
+  border: none;
+
+  border-radius: 8px;
+
+  cursor: pointer;
+
+  transition: background-color 0.2s ease;
+
+  &:hover {
+    background-color: #8670e3;
+  }
+}
