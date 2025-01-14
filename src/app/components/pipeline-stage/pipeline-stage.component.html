@@ -1,7 +1,11 @@
 <div class="pipeline-stage">
-  <div class="settings-buttton"></div>
   <div class="stage-header">
-    <h3>{{ title() }}</h3>
+    <div class="stage-title">
+      <h3>{{ title() }}</h3>
+      <button class="edit-stage-btn">
+        <span class="edit-icon">✎</span>
+      </button>
+    </div>
     <span class="deal-count">{{ deals().length }} deals</span>
     <span class="stage-value">{{ getTotalDealsValue() | currency }} </span>
   </div>

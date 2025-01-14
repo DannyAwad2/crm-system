@@ -5,15 +5,21 @@ import { PipelineStageComponent } from '../../components/pipeline-stage/pipeline
 import { PipelineHeaderComponent } from '../../components/pipeline-header/pipeline-header.component';
 import {
   CdkDragDrop,
-  CdkDropList,
   moveItemInArray,
   transferArrayItem,
 } from '@angular/cdk/drag-drop';
 import { NotificationService } from '../../services/notification.service';
+import { EditStageModalComponent } from '../../components/edit-stage-modal/edit-stage-modal.component';
+import { StageModalComponent } from '../../components/stage-modal/stage-modal.component';
 
 @Component({
   selector: 'app-pipeline',
-  imports: [PipelineStageComponent, PipelineHeaderComponent, CdkDropList],
+  imports: [
+    PipelineStageComponent,
+    PipelineHeaderComponent,
+    EditStageModalComponent,
+    StageModalComponent,
+  ],
   templateUrl: './pipeline.component.html',
   styleUrl: './pipeline.component.scss',
 })

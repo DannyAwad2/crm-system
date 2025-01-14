@@ -9,13 +9,18 @@
     </div>
   </div>
 
-  @if (isDealsUpdated()) {
-  <div class="header-center">
-    <button class="add-deal-btn" (click)="handleSave()">Save Changes</button>
-  </div>
-  }
-
   <div class="header-right">
-    <button class="add-deal-btn">+ New Deal</button>
+    <button
+      class="primary-btn"
+      onclick="document.getElementById('newStageModal').style.display='block'"
+    >
+      + New Stage
+    </button>
+    <button
+      class="primary-btn"
+      onclick="document.getElementById('newDealModal').style.display='block'"
+    >
+      + New Deal
+    </button>
   </div>
 </header>

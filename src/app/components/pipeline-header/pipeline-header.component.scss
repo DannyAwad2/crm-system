@@ -38,7 +38,7 @@
 
 // Add Deal Button
 
-.add-deal-btn {
+.primary-btn {
   padding: 10px 20px;
 
   background-color: #9b87f5;
@@ -56,4 +56,9 @@
   &:hover {
     background-color: #8670e3;
   }
+}
+
+.header-right {
+  display: flex;
+  gap: 12px;
 }
