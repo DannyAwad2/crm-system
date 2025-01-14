@@ -1,4 +1,5 @@
 <div class="pipeline-stage">
+  <div class="settings-buttton"></div>
   <div class="stage-header">
     <h3>{{ title() }}</h3>
     <span class="deal-count">{{ deals().length }} deals</span>
@@ -6,13 +7,17 @@
   </div>
 
   <div
+    [id]="id()"
     cdkDropList
     class="deals-container"
     [cdkDropListData]="deals()"
     (cdkDropListDropped)="drop($event)"
+    [cdkDropListConnectedTo]="connectedDropLists()"
   >
     @for (deal of deals(); track deal.dealId) {
     <app-deal-item cdkDrag cdkDragData="deal" [deal]="deal" />
+    } @empty {
+    <app-deal-item-placeholder />
     }
   </div>
 </div>

@@ -1,0 +1,65 @@
+@if (show()) {
+
+<!-- New Task Modal -->
+<div id="newTaskModal" class="modal">
+  <div class="modal-content">
+    <span
+      class="close-modal"
+      onclick="document.getElementById('newTaskModal').style.display='none'"
+      >&times;</span
+    >
+    <h2>Add New Task</h2>
+    <form class="task-form">
+      <div class="form-group">
+        <label for="taskTitle">Task Title</label>
+        <input
+          type="text"
+          id="taskTitle"
+          placeholder="Enter task title"
+          required
+        />
+      </div>
+      <div class="form-group">
+        <label for="taskDescription">Description</label>
+        <textarea
+          id="taskDescription"
+          placeholder="Enter task description"
+          rows="3"
+          required
+        ></textarea>
+      </div>
+      <div class="form-group">
+        <label for="dueDate">Due Date</label>
+        <input type="date" id="dueDate" required />
+      </div>
+      <div class="form-group">
+        <label for="assignee">Assignee</label>
+        <select id="assignee" required>
+          <option value="">Select assignee</option>
+          <option value="sarah">Sarah Johnson</option>
+          <option value="michael">Michael Chen</option>
+          <option value="emma">Emma Wilson</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="priority">Priority</label>
+        <select id="priority" required>
+          <option value="low">Low</option>
+          <option value="medium">Medium</option>
+          <option value="high">High</option>
+        </select>
+      </div>
+      <div class="form-actions">
+        <button
+          type="button"
+          class="cancel-btn"
+          onclick="document.getElementById('newTaskModal').style.display='none'"
+        >
+          Cancel
+        </button>
+        <button type="submit" class="submit-btn">Create Task</button>
+      </div>
+    </form>
+  </div>
+</div>
+}

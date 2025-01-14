@@ -1,33 +1,49 @@
-<app-pipeline-header [deals]="deals" />
+<app-pipeline-header
+  [deals]="deals"
+  [isDealsUpdated]="isDealsUpdated"
+  (onSave)="handleSave()"
+/>
 <div class="pipeline-container">
   <app-pipeline-stage
+    id="leads"
     title="Leads"
-    [deals]="leads"
-    (onChange)="handleChange(leads, $event)"
+    [deals]="[]"
+    [connectedDropLists]="dropListIds"
+    (onChange)="handleChange($event)"
   />
   <app-pipeline-stage
+    id="meetings"
     title="Meetings"
     [deals]="meetings"
-    (onChange)="handleChange(meetings, $event)"
+    [connectedDropLists]="dropListIds"
+    (onChange)="handleChange($event)"
   />
   <app-pipeline-stage
+    id="proposals"
     title="Proposals"
     [deals]="proposals"
-    (onChange)="handleChange(proposals, $event)"
+    [connectedDropLists]="dropListIds"
+    (onChange)="handleChange($event)"
   />
   <app-pipeline-stage
+    id="negotiations"
     title="Negotiations"
     [deals]="negotiations"
-    (onChange)="handleChange(negotiations, $event)"
+    [connectedDropLists]="dropListIds"
+    (onChange)="handleChange($event)"
   />
   <app-pipeline-stage
+    id="wins"
     title="Wins"
-    [deals]="loses"
-    (onChange)="handleChange(loses, $event)"
+    [deals]="wins"
+    [connectedDropLists]="dropListIds"
+    (onChange)="handleChange($event)"
   />
   <app-pipeline-stage
+    id="loses"
     title="Loses"
     [deals]="loses"
-    (onChange)="handleChange(loses, $event)"
+    [connectedDropLists]="dropListIds"
+    (onChange)="handleChange($event)"
   />
 </div>

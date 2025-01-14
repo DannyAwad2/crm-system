@@ -1,0 +1,32 @@
+<!-- Edit Stage Modal -->
+<div id="editStageModal" class="modal">
+  <div class="modal-content">
+    <span
+      class="close-modal"
+      onclick="document.getElementById('editStageModal').style.display='none'"
+      >&times;</span
+    >
+    <h2>Edit Stage</h2>
+    <form class="stage-form">
+      <div class="form-group">
+        <label for="stageName">Stage Name</label>
+        <input
+          type="text"
+          id="stageName"
+          placeholder="Enter stage name"
+          required
+        />
+      </div>
+      <div class="form-actions">
+        <button
+          type="button"
+          class="cancel-btn"
+          onclick="document.getElementById('editStageModal').style.display='none'"
+        >
+          Cancel
+        </button>
+        <button type="submit" class="submit-btn">Save Changes</button>
+      </div>
+    </form>
+  </div>
+</div>

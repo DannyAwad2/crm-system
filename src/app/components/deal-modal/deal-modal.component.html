@@ -1,0 +1,81 @@
+<!-- New Deal Modal -->
+@if (show()) {
+<div id="newDealModal" class="modal">
+  <div class="modal-content">
+    <span
+      class="close-modal"
+      onclick="document.getElementById('newDealModal').style.display='none'"
+      >&times;</span
+    >
+
+    <h2>Add New Deal</h2>
+
+    <form class="deal-form">
+      <div class="form-group">
+        <label for="dealName">Deal Name</label>
+
+        <input
+          type="text"
+          id="dealName"
+          placeholder="Enter deal name"
+          required
+        />
+      </div>
+
+      <div class="form-group">
+        <label for="company">Company</label>
+
+        <input
+          type="text"
+          id="company"
+          placeholder="Enter company name"
+          required
+        />
+      </div>
+
+      <div class="form-group">
+        <label for="value">Deal Value</label>
+
+        <input
+          type="number"
+          id="value"
+          placeholder="Enter deal value"
+          required
+        />
+      </div>
+
+      <div class="form-group">
+        <label for="owner">Deal Owner</label>
+
+        <input type="text" id="owner" placeholder="Enter deal owner" required />
+      </div>
+
+      <div class="form-group">
+        <label for="stage">Stage</label>
+
+        <select id="stage" required>
+          <option value="lead">Lead</option>
+
+          <option value="meeting">Meeting</option>
+
+          <option value="proposal">Proposal</option>
+
+          <option value="negotiation">Negotiation</option>
+        </select>
+      </div>
+
+      <div class="form-actions">
+        <button
+          type="button"
+          class="cancel-btn"
+          onclick="document.getElementById('newDealModal').style.display='none'"
+        >
+          Cancel
+        </button>
+
+        <button type="submit" class="submit-btn">Add Deal</button>
+      </div>
+    </form>
+  </div>
+</div>
+}

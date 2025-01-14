@@ -9,6 +9,12 @@
     </div>
   </div>
 
+  @if (isDealsUpdated()) {
+  <div class="header-center">
+    <button class="add-deal-btn" (click)="handleSave()">Save Changes</button>
+  </div>
+  }
+
   <div class="header-right">
     <button class="add-deal-btn">+ New Deal</button>
   </div>
