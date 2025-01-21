@@ -38,7 +38,8 @@
 
 // Add Deal Button
 
-.primary-btn {
+.primary-btn,
+.save-btn {
   padding: 10px 20px;
 
   background-color: #9b87f5;
@@ -55,6 +56,13 @@
 
   &:hover {
     background-color: #8670e3;
+  }
+}
+
+.save-btn {
+  background-color: rgb(25, 200, 25);
+  &:hover {
+    background-color: rgba(25, 200, 25, 0.8);
   }
 }
 

@@ -11,6 +11,7 @@ import {
 import { NotificationService } from '../../services/notification.service';
 import { EditStageModalComponent } from '../../components/edit-stage-modal/edit-stage-modal.component';
 import { StageModalComponent } from '../../components/stage-modal/stage-modal.component';
+import { DealModalComponent } from '../../components/deal-modal/deal-modal.component';
 
 @Component({
   selector: 'app-pipeline',
@@ -19,6 +20,7 @@ import { StageModalComponent } from '../../components/stage-modal/stage-modal.co
     PipelineHeaderComponent,
     EditStageModalComponent,
     StageModalComponent,
+    DealModalComponent,
   ],
   templateUrl: './pipeline.component.html',
   styleUrl: './pipeline.component.scss',
