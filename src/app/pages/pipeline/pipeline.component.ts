@@ -9,7 +9,6 @@ import {
   transferArrayItem,
 } from '@angular/cdk/drag-drop';
 import { NotificationService } from '../../services/notification.service';
-import { EditStageModalComponent } from '../../components/edit-stage-modal/edit-stage-modal.component';
 import { StageModalComponent } from '../../components/stage-modal/stage-modal.component';
 import { DealModalComponent } from '../../components/deal-modal/deal-modal.component';
 
@@ -18,7 +17,7 @@ import { DealModalComponent } from '../../components/deal-modal/deal-modal.compo
   imports: [
     PipelineStageComponent,
     PipelineHeaderComponent,
-    EditStageModalComponent,
+    StageModalComponent,
     StageModalComponent,
     DealModalComponent,
   ],

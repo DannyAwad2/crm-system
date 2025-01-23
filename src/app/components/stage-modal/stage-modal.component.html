@@ -7,16 +7,43 @@
       onclick="document.getElementById('newStageModal').style.display='none'"
       >&times;</span
     >
-    <h2>Add New Stage</h2>
+    <h2>Edit Stages</h2>
     <form class="stage-form">
       <div class="form-group">
-        <label for="newStageName">Stage Name</label>
-        <input
-          type="text"
-          id="newStageName"
-          placeholder="Enter stage name"
-          required
-        />
+        <div class="input-row">
+          <input
+            type="text"
+            id="stageName1"
+            name="stageName1"
+            placeholder="Enter stage name"
+            required
+          />
+          <div class="input-actions">
+            <button
+              type="button"
+              class="icon-btn add-btn"
+              title="Add Stage"
+              onclick="addInput()"
+            >
+              ➕
+            </button>
+            <button
+              type="button"
+              class="icon-btn remove-btn"
+              title="Remove Stage"
+              onclick="removeInput(this)"
+            >
+              ➖
+            </button>
+            <button
+              type="button"
+              class="icon-btn drag-btn"
+              title="Reorder Stage"
+            >
+              ☰
+            </button>
+          </div>
+        </div>
       </div>
       <div class="form-actions">
         <button
